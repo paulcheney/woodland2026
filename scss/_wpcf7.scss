@@ -1,0 +1,83 @@
+/************************** IMPORT VARIABLES **************************/
+@use "variables" as *;
+
+/************************** WEB FORM **************************/
+.hidden-fields-container {
+    display: none;
+}
+
+.wpcf7 {
+    margin: 1rem $gutter;
+    max-width: 600px;
+    label {
+        display: block;
+        color: $color-grey-80
+        //border: dashed 1px red;
+    }
+    input[type=text], input[type=tel], input[type=email], textarea{
+        display: block;
+        padding: .5rem $gutter;
+        margin-bottom: 1rem;
+        border: 1px solid $color-grey-40;
+        border-radius: 4px;
+        color: $color-grey-50;
+        width: 100%
+    }
+    input[type=checkbox]{
+        display: inline-block;
+        margin: .3rem 4px .3rem 0;
+    }
+    p, .cf7ic_instructions {
+        display: block;
+        margin: 1rem 0 0 0;
+        font-weight: $font-weight-normal;
+        color: $color-primary;
+    }
+}
+
+.wpcf7-submit {
+    background-color: $color-grey-90;
+    color:$color-grey-05;
+    padding: .6rem 2rem;
+    border-radius: 99px;
+    border: none;
+    margin: 1rem 0;
+    @include img-shadow-1;
+    cursor: pointer;
+    &:hover {
+    color: $color-grey-90;
+    background-color:$color-grey-05;
+    }
+}
+/************************** FORM FEEDBACK **************************/
+.wpcf7-response-output {
+    font-weight: $font-weight-heavy;
+    font-size: 1.2rem;
+    padding: 1rem $gutter;
+    text-align: center;
+    color: $color-grey-40;
+}
+.screen-reader-response {
+    display: none;
+}
+.wpcf7-not-valid-tip {
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 1rem;
+    color: #bd0000;
+    font-size: .7rem;
+    font-weight: $font-weight-heavy;
+}
+
+
+/************************** captcha **************************/
+.captcha-image {
+    span {
+        font-weight: $font-weight-heavy;
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+        margin-left: 4px;
+    }
+}

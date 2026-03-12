@@ -1,0 +1,38 @@
+$color-primary: #064661; // blue;
+$color-secondary: #07959f; // aqua
+$accent-accent: red; 
+
+// Add a Neutral grey scale colors
+$color-grey-05: lab(98% 0 0);
+$color-grey-10: lab(97% 0 0);
+$color-grey-20: lab(91% 0 0);
+$color-grey-30: lab(85% 0 0);
+$color-grey-40: lab(66% 0 0);
+$color-grey-50: lab(48% 0 0);
+$color-grey-60: lab(34% 0 0);
+$color-grey-70: lab(27% 0 0);
+$color-grey-80: lab(15% 0 0);
+$color-grey-90: lab(8% 0 0);
+$color-grey-95: lab(3% 0 0);
+
+// Font family stuff
+$font-family: "Josefin Sans", sans-serif;
+$font-weight-thin: 100;
+$font-weight-normal: 300;
+$font-weight-heavy: 500;
+
+// Breakpoint Stuff
+$break-point-md: 480px; 
+$break-point-lg: 1024px; 
+
+// Layout Stuff
+$gutter: 10px;
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+@mixin img-shadow-1 {
+    display: block;
+    border: solid 1px $color-grey-30;
+    box-shadow: 1px 1px 6px $color-grey-30;
+}

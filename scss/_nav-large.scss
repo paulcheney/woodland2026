@@ -1,0 +1,52 @@
+/************************** IMPORT VARIABLES **************************/
+@use "variables" as *;
+
+/************************** MEDIA QUERY STARTS HERE **************************/
+@media only screen and (min-width: $break-point-lg) {
+
+    /************************** HAMBURGER **************************/
+    .hamburger-button {
+        display: none;
+    }
+
+    /************************** NAVIGATION **************************/
+    nav {
+        grid-column: 2 / span 1;
+        justify-self: end;
+        margin-right: $gutter;
+    }
+
+    // Show the nav links no matter what
+    .site-nav,
+    .site-nav.open {
+        display: flex;
+        padding-left: $gutter;
+    }
+
+    // Style the TOP LEVEL Navigation links
+    .site-nav li a {
+        font-size: .75rem;
+        border-bottom: none;
+    }
+
+    // Show the sub menus on hover
+    .site-nav li ul {
+        background-color: $color-grey-05;
+        position: absolute;
+        z-index: 999;
+    }
+
+    //Style the current menu item
+    .current-menu-item>a {
+        background-color: white;
+        color: $color-primary;
+        text-decoration: underline;
+    }
+
+    //style the PARENT of the current menu item
+    .current-menu-parent>a {
+        background-color: white;
+    }
+}
+
+// end media query

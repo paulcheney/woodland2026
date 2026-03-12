@@ -1,0 +1,158 @@
+/************************** IMPORT VARIABLES **************************/
+@use "variables" as *;
+
+/************************** BORDER BOX **************************/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/************************** BODY **************************/
+body {
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
+  @include reset;
+}
+
+img.hero {
+  display: block;
+  width: calc(100% - ($gutter * 2));
+  height:auto;
+  margin: $gutter;
+  @include img-shadow-1;
+  
+  border-radius: 10px;
+}
+
+
+/************************** HEADER **************************/
+header {
+  padding: .5rem $gutter;
+  display: grid;
+  grid-template-columns: 180px auto;
+  column-gap: 8px;
+  align-items: end;
+  border-bottom: 1px solid $color-grey-10;
+  box-shadow: 0 0 10px $color-grey-10;
+
+  span {
+    font-size: 2rem;
+    font-weight: $font-weight-normal;
+    color: $color-primary;
+  }
+}
+
+
+
+
+
+/************************** MAIN **************************/
+@mixin fixheads {
+  padding: 0;
+  margin: 0;
+  font-weight: $font-weight-normal;
+}
+
+main {
+  >h1 {
+    @include fixheads;
+    font-size: 2rem;
+    color: $color-primary;
+    margin: 1rem $gutter 0 $gutter;
+  }
+
+  >h2 {
+    @include fixheads;
+    font-size: 1.6rem;
+    color: $color-grey-80;
+    margin: .75rem $gutter 0 $gutter;
+  }
+
+  >h3 {
+    @include fixheads;
+    font-size: 1.3rem;
+    font-weight: $font-weight-heavy;
+    color: $color-grey-50;
+    margin: .5rem $gutter 0 $gutter;
+  }
+
+  >p {
+    @include fixheads;
+    font-size: 1rem;
+    color: $color-grey-80;
+    margin: .1rem $gutter ;
+    line-height: 150%;
+  }
+  >ul li {
+    line-height: 150%;
+    color: $color-grey-80;
+  }
+}
+
+
+/************************** FOOTER **************************/
+footer .top {
+  background-color: $color-grey-90;
+  color: $color-grey-10;
+  padding: 0 $gutter 1rem $gutter;
+
+  h3 {
+    @include reset;
+    display: block;
+    font-size: .8rem;
+    color: $color-grey-50;
+    text-transform: uppercase;
+    font-weight: $font-weight-heavy;
+    padding-top: 1.5rem;
+    padding-bottom: .1rem;
+  }
+
+  .social {
+    @include reset;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gutter;
+    a {
+      display: block;
+      width: 44px;
+      height: 44px;
+      border: 2px solid $color-grey-10;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-grey-40;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $color-secondary;
+      }
+    }
+  }
+
+  p,
+  address,
+  a {
+    @include reset;
+    color: $color-grey-10;
+    font-style: normal;
+    line-height: 125%;
+  }
+
+  a:hover {
+    color: $color-secondary;
+  }
+}
+
+footer .bot {
+  padding: 1rem $gutter;
+  background-color: $color-grey-20;
+  color: $color-grey-80;
+  text-align: center;
+  font-size: .8rem;
+  a {
+    color: $color-grey-90;
+  }
+}

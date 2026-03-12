@@ -1,0 +1,106 @@
+/************************** IMPORT VARIABLES **************************/
+@use "variables" as *;
+
+/************************** HAMBURGER **************************/
+.hamburger-button {
+  background: none;
+  border: none;
+  color: $color-grey-60;
+  cursor: pointer;
+  font-family: Verdana;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  justify-self: end;
+}
+
+.hamburger-button::before {
+  content: "\2630";
+}
+
+.hamburger-button.open::before {
+  content: "\00D7";
+}
+
+
+
+/************************** NAVIGATION **************************/
+nav {
+  grid-column: 1 / span 2;
+}
+
+// Style the TOP LEVEL Navigation
+.site-nav {
+  @include reset;
+  list-style-type: none;
+  font-family: Verdana;
+  display: none;
+
+  li ul {
+    @include reset;
+    list-style-type: none;
+  }
+}
+
+// Show and hide the menu
+.site-nav.open {
+  display: block;
+}
+
+// Style the TOP LEVEL Navigation
+.site-nav a {
+  display: block;
+  text-decoration: none;
+  color: $color-grey-80;
+  padding: .75rem $gutter;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border-bottom: 1px solid $color-grey-10;
+  height: 100%; // for large screens
+  transition: background-color .3s ease;
+
+  &:hover {
+    background-color: $color-grey-80;
+    color: $color-grey-10;
+
+  }
+}
+
+.site-nav li ul a {
+  text-transform: capitalize;
+  font-size: .8rem;
+}
+
+//ADD + or - to main menu items with CHILDREN
+.menu-item-has-children>a {
+  display: grid;
+  grid-template-columns: auto 16px;
+}
+
+.menu-item-has-children>a::after {
+  content: "+";
+}
+
+.menu-item-has-children>a:hover::after {
+  content: "\2013";
+}
+
+//Style the current menu item
+.current-menu-item>a {
+  background-color: $color-primary;
+  color: white;
+}
+
+//style the PARENT of the current menu item
+.current-menu-parent>a {
+  background-color: $color-grey-20
+}
+
+//Make them menu interactive
+.menu-item-has-children ul {
+  display: none;
+}
+
+.menu-item-has-children:hover ul {
+  display: block;
+}

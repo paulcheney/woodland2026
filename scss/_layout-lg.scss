@@ -1,0 +1,23 @@
+/************************** IMPORT VARIABLES **************************/
+@use "variables" as *;
+
+// MEDIA QUERY STARTS HERE
+@media only screen and (min-width: $break-point-lg) {
+
+  header,
+  main,
+  footer {
+    margin: 0 auto;
+    max-width: 1296px;
+  }
+
+  /************************** GRID LAYOUT **************************/
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+}
+
+// end media query

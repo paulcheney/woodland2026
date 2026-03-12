@@ -1,0 +1,26 @@
+/************************** IMPORT VARIABLES **************************/
+@use "variables" as *;
+
+/************************** HERO VIDEO **************************/
+.hero-video {
+    position: relative;
+
+    video {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    a {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        padding: .7rem 1rem;
+        text-decoration: none;
+        color: $color-primary;
+        background-color: $color-secondary;
+        border: 1px solid $color-grey-20;
+        border-radius: 10px;
+        box-shadow: 3px 3px 8px $color-grey-70;
+    }
+}

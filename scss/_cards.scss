@@ -1,0 +1,84 @@
+/************************** IMPORT VARIABLES **************************/
+@use "variables" as *;
+
+/************************** STYLES FOR card-one **************************/
+.card-one {
+    font-family: $font-family;
+    font-weight: $font-weight-normal;
+    margin: 1rem $gutter;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: $gutter;
+    section {
+        display: flex;
+        flex-direction: column;
+        background-color: $color-grey-10;
+        border: 1px solid $color-grey-20;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    span {
+        color: $color-grey-70;
+        text-align: center;
+        padding: .75rem $gutter;
+        font-size: 1.3rem;
+        font-weight: $font-weight-heavy;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    a {
+        color: $color-secondary;
+        background-color: $color-grey-90;
+        padding: .5rem;
+        margin: 1rem;
+        text-align: center;
+        border-radius: 99px;
+        &:hover {
+            background-color: $color-grey-70;
+        }
+    }
+}
+
+
+
+/************************** STYLES FOR side-by-side **************************/
+.side-by-side {
+    font-family: $font-family;
+    font-weight: $font-weight-normal;
+    margin: 1rem $gutter;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: $gutter;
+    p {
+        font-size: 1.3rem;
+        color: $color-grey-80;
+    }
+    address {
+        font-style: normal;
+        font-size: 1.5rem;
+        border-left: 4px solid $color-secondary;
+        padding-left: 5px;
+    }
+    ul {
+        font-size: 1.1rem;
+        color: $color-grey-60;
+        padding-left: 1rem;
+        line-height: 130%;
+        li {
+            padding-bottom: .5rem;
+        }
+        li::marker {
+            color: $color-secondary;
+        }
+    }
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px $color-grey-40 ;
+    }
+}
