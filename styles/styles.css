@@ -462,8 +462,6 @@ img.hero {
   width: calc(100% - 20px);
   height: auto;
   margin: 10px;
-  display: block;
-  border: solid 1px lab(85% 0 0);
   box-shadow: 1px 1px 6px lab(85% 0 0);
   border-radius: 10px;
 }
@@ -613,6 +611,16 @@ footer .bot a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+  /************************** CARD3 - Doctor **************************/
+  .card3 {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card3 img {
+    margin: 2rem 10px;
+    border-radius: 10px;
+  }
 }
 .swiper-slide img {
   width: 100%;
@@ -643,84 +651,88 @@ footer .bot a {
 }
 
 /************************** IMPORT VARIABLES **************************/
-/************************** STYLES FOR card-one **************************/
-.card-one {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
+/************************** CARD1 - Reviews **************************/
+.card1 {
   margin: 1rem 10px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 10px;
+  box-shadow: 1px 1px 6px lab(85% 0 0);
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s;
+  background-color: lab(98% 0 0);
+  border: 1px solid lab(91% 0 0);
+  padding: 60px 1rem 1rem 1rem;
+  border-radius: 10px;
+  background-image: url(/photos/review.png);
+  background-repeat: no-repeat;
+  background-position: center 20px;
 }
-.card-one section {
-  display: flex;
-  flex-direction: column;
-  background-color: lab(97% 0 0);
+.card1 p {
+  color: lab(15% 0 0);
+  font-style: italic;
+}
+
+/************************** CARD2 - Staff **************************/
+.card2 {
+  margin: 1rem 10px;
+  box-shadow: 1px 1px 6px lab(85% 0 0);
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s;
+  background-color: lab(98% 0 0);
   border: 1px solid lab(91% 0 0);
   border-radius: 10px;
   overflow: hidden;
 }
-.card-one span {
-  color: lab(27% 0 0);
-  text-align: center;
-  padding: 0.75rem 10px;
-  font-size: 1.3rem;
-  font-weight: 500;
-}
-.card-one img {
+.card2 img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
 }
-.card-one a {
-  color: #07959f;
-  background-color: lab(8% 0 0);
-  padding: 0.5rem;
-  margin: 1rem;
-  text-align: center;
-  border-radius: 99px;
-}
-.card-one a:hover {
-  background-color: lab(27% 0 0);
-}
-
-/************************** STYLES FOR side-by-side **************************/
-.side-by-side {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-  margin: 1rem 10px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 10px;
-}
-.side-by-side p {
-  font-size: 1.3rem;
-  color: lab(15% 0 0);
-}
-.side-by-side address {
-  font-style: normal;
+.card2 h3 {
   font-size: 1.5rem;
-  border-left: 4px solid #07959f;
-  padding-left: 5px;
+  margin: 0;
+  padding: 0.5rem 10px 0;
+  color: #064661;
 }
-.side-by-side ul {
-  font-size: 1.1rem;
-  color: lab(34% 0 0);
-  padding-left: 1rem;
+.card2 p {
+  font-weight: 300;
+  color: lab(48% 0 0);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0.5rem 10px;
   line-height: 130%;
 }
-.side-by-side ul li {
-  padding-bottom: 0.5rem;
+
+/************************** CARD3 - Doctor **************************/
+.card3 {
+  margin: 1rem 10px;
+  box-shadow: 1px 1px 6px lab(85% 0 0);
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s;
+  background-color: lab(98% 0 0);
+  border: 1px solid lab(91% 0 0);
+  border-radius: 10px;
+  overflow: hidden;
 }
-.side-by-side ul li::marker {
-  color: #07959f;
-}
-.side-by-side img {
+.card3 img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
-  border-radius: 10px;
-  box-shadow: 1px 1px 6px lab(66% 0 0);
+}
+.card3 aside {
+  margin: 1rem 10px;
+}
+.card3 p {
+  color: lab(34% 0 0);
+}
+
+/************************** FADEIN INTERSECTION OBSERVER **************************/
+.fadein {
+  opacity: 0.1;
+  transform: translateY(10px);
 }
 
 /************************** IMPORT VARIABLES **************************/
@@ -764,8 +776,6 @@ footer .bot a {
   border-radius: 99px;
   border: none;
   margin: 1rem 0;
-  display: block;
-  border: solid 1px lab(85% 0 0);
   box-shadow: 1px 1px 6px lab(85% 0 0);
   cursor: pointer;
 }

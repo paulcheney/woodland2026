@@ -12,12 +12,19 @@
   }
 
   /************************** GRID LAYOUT **************************/
-.grid-3 {
+  .grid-3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /************************** CARD3 - Doctor **************************/
+  .card3 {
+    display: grid;
+    column-gap: $gutter;
+    grid-template-columns: 1fr 1fr;
+    img {
+      margin: 2rem $gutter;
+      border-radius: 10px;
+    }
+  }
 }
-
-
-}
-
-// end media query
