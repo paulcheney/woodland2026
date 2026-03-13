@@ -614,12 +614,13 @@ footer .bot a {
   /************************** CARD3 - Doctor **************************/
   .card3 {
     display: grid;
-    column-gap: 10px;
+    column-gap: 40px;
     grid-template-columns: 1fr 1fr;
+    padding: 0 40px;
   }
   .card3 img {
     margin: 2rem 10px;
-    border-radius: 10px;
+    border-radius: 4px;
   }
 }
 .swiper-slide img {

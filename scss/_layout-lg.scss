@@ -20,11 +20,12 @@
   /************************** CARD3 - Doctor **************************/
   .card3 {
     display: grid;
-    column-gap: $gutter;
+    column-gap: 40px;
     grid-template-columns: 1fr 1fr;
+    padding: 0 40px;
     img {
       margin: 2rem $gutter;
-      border-radius: 10px;
+      border-radius: 4px;
     }
   }
 }
