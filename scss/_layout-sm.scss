@@ -35,12 +35,6 @@ header {
   align-items: end;
   border-bottom: 1px solid $color-grey-10;
   box-shadow: 0 0 10px $color-grey-10;
-
-  span {
-    font-size: 2rem;
-    font-weight: $font-weight-normal;
-    color: $color-primary;
-  }
 }
 
 
@@ -48,12 +42,6 @@ header {
 
 
 /************************** MAIN **************************/
-@mixin fixheads {
-  padding: 0;
-  margin: 0;
-  font-weight: $font-weight-normal;
-}
-
 main {
   >h1 {
     @include fixheads;

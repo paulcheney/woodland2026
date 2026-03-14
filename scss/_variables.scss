@@ -39,3 +39,8 @@ $gutter: 10px;
     transform: translateY(0);
     transition: 1s;
 }
+@mixin fixheads {
+    padding: 0;
+    margin: 0;
+    font-weight: $font-weight-normal;
+  }

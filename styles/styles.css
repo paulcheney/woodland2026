@@ -451,7 +451,7 @@ nav {
 
 /************************** BODY **************************/
 body {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -475,11 +475,6 @@ header {
   align-items: end;
   border-bottom: 1px solid lab(97% 0 0);
   box-shadow: 0 0 10px lab(97% 0 0);
-}
-header span {
-  font-size: 2rem;
-  font-weight: 300;
-  color: #064661;
 }
 
 /************************** MAIN **************************/
@@ -668,8 +663,9 @@ footer .bot a {
   background-position: center 20px;
 }
 .card1 p {
-  color: lab(15% 0 0);
+  color: lab(27% 0 0);
   font-style: italic;
+  font-size: 1.1rem;
 }
 
 /************************** CARD2 - Staff **************************/
