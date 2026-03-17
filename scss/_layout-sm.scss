@@ -115,7 +115,7 @@ main {
   }
 
   .checklist li {
-    list-style-image: url(/photos/check.png);
+    list-style-image: url(photos/check.png);
     line-height: 200%;
     color: $color-primary;
     font-size: 1.1em;
@@ -129,7 +129,7 @@ main {
     border: 1px solid $color-grey-40;
     border-radius: 10px;
     background-color: $color-secondary;
-    background-image: url(/photos/download.svg);
+    background-image: url(photos/download.svg);
     background-repeat: no-repeat;
     background-position: right 20px center;
     background-size: 20px;

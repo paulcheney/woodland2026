@@ -551,7 +551,7 @@ main > ol li b {
   color: #07959f;
 }
 main .checklist li {
-  list-style-image: url(/photos/check.png);
+  list-style-image: url(photos/check.png);
   line-height: 200%;
   color: #064661;
   font-size: 1.1em;
@@ -564,7 +564,7 @@ main .download {
   border: 1px solid lab(66% 0 0);
   border-radius: 10px;
   background-color: #07959f;
-  background-image: url(/photos/download.svg);
+  background-image: url(photos/download.svg);
   background-repeat: no-repeat;
   background-position: right 20px center;
   background-size: 20px;
