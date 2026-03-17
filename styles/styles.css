@@ -452,7 +452,7 @@ nav {
 /************************** BODY **************************/
 body {
   font-family: "Jost", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }
@@ -481,7 +481,7 @@ header {
 main > h1 {
   padding: 0;
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 2rem;
   color: #064661;
   margin: 1rem 10px 0 10px;
@@ -489,32 +489,136 @@ main > h1 {
 main > h2 {
   padding: 0;
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.6rem;
-  color: lab(15% 0 0);
+  color: #07959f;
+  font-weight: 400;
   margin: 0.75rem 10px 0 10px;
 }
 main > h3 {
   padding: 0;
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 600;
   color: lab(48% 0 0);
   margin: 0.5rem 10px 0 10px;
+}
+main > h4 {
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(#07959f, #064661);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  margin: 1rem 10px 0.3rem 10px;
+  font-weight: 500;
+  box-shadow: 1px 1px 6px lab(85% 0 0);
+}
+main > h5 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: lab(34% 0 0);
+  margin: 0.3rem 10px;
+}
+main > h5 b {
+  font-weight: 400;
 }
 main > p {
   padding: 0;
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1rem;
   color: lab(15% 0 0);
   margin: 0.1rem 10px;
   line-height: 150%;
 }
+main a {
+  color: #07959f;
+  font-weight: 400;
+}
 main > ul li {
   line-height: 150%;
   color: lab(15% 0 0);
+}
+main > ol li {
+  padding: 0.5rem;
+  line-height: 130%;
+  color: lab(15% 0 0);
+}
+main > ol li b {
+  font-weight: 600;
+  color: #07959f;
+}
+main .checklist li {
+  list-style-image: url(/photos/check.png);
+  line-height: 200%;
+  color: #064661;
+  font-size: 1.1em;
+}
+main .download {
+  display: block;
+  color: white;
+  padding: 1rem 10px;
+  margin: 1rem 10px;
+  border: 1px solid lab(66% 0 0);
+  border-radius: 10px;
+  background-color: #07959f;
+  background-image: url(/photos/download.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 20px;
+  transition: background-color 0.5s ease;
+}
+main .download:hover {
+  background-color: #064661;
+}
+
+/************************** PHOTOS **************************/
+img.wrapped {
+  display: block;
+  float: right;
+  margin: 10px 10px;
+  width: 50%;
+  border-radius: 10px;
+  border: 1px solid lab(48% 0 0);
+  box-shadow: 1px 1px 6px lab(85% 0 0);
+}
+
+img.smile {
+  display: block;
+  width: calc(100% - 20px);
+  height: auto;
+  margin: 1rem 10px;
+  border-radius: 10px;
+}
+
+/************************** F A Q **************************/
+details.faq {
+  background-color: #f2f2f2;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 0.5em 0.5em 0;
+  margin: 1rem 10px;
+  box-shadow: 1px 1px 6px lab(85% 0 0);
+  line-height: 140%;
+  color: lab(34% 0 0);
+}
+details.faq summary {
+  font-weight: bold;
+  font-weight: 600;
+  color: #064661;
+  padding: 0.5em;
+}
+details.faq img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+details.faq b {
+  font-weight: 400;
+  color: #07959f;
 }
 
 /************************** FOOTER **************************/
@@ -530,7 +634,7 @@ footer .top h3 {
   font-size: 0.8rem;
   color: lab(48% 0 0);
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   padding-top: 1.5rem;
   padding-bottom: 0.1rem;
 }
@@ -592,6 +696,19 @@ footer .bot a {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  /************************** PHOTOS **************************/
+  img.wrapped {
+    width: 40%;
+  }
+  /************************** F A Q **************************/
+  details.faq section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 10px;
+  }
+  details.faq section img {
+    margin-top: 16px;
+  }
 }
 /************************** IMPORT VARIABLES **************************/
 @media only screen and (min-width: 1024px) {
@@ -616,6 +733,10 @@ footer .bot a {
   .card3 img {
     margin: 2rem 10px;
     border-radius: 4px;
+  }
+  /************************** PHOTOS **************************/
+  img.wrapped {
+    width: 30%;
   }
 }
 .swiper-slide img {
@@ -692,7 +813,7 @@ footer .bot a {
   color: #064661;
 }
 .card2 p {
-  font-weight: 300;
+  font-weight: 400;
   color: lab(48% 0 0);
   letter-spacing: 0.1rem;
   text-transform: uppercase;
@@ -762,7 +883,7 @@ footer .bot a {
 .wpcf7 p, .wpcf7 .cf7ic_instructions {
   display: block;
   margin: 1rem 0 0 0;
-  font-weight: 300;
+  font-weight: 400;
   color: #064661;
 }
 
@@ -783,7 +904,7 @@ footer .bot a {
 
 /************************** FORM FEEDBACK **************************/
 .wpcf7-response-output {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.2rem;
   padding: 1rem 10px;
   text-align: center;
@@ -800,12 +921,12 @@ footer .bot a {
   margin-bottom: 1rem;
   color: #bd0000;
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /************************** captcha **************************/
 .captcha-image span {
-  font-weight: 500;
+  font-weight: 600;
 }
 .captcha-image svg {
   width: 20px;

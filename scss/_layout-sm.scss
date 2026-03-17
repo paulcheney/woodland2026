@@ -18,10 +18,10 @@ body {
 img.hero {
   display: block;
   width: calc(100% - ($gutter * 2));
-  height:auto;
+  height: auto;
   margin: $gutter;
   @include img-shadow-1;
-  
+
   border-radius: 10px;
 }
 
@@ -53,7 +53,8 @@ main {
   >h2 {
     @include fixheads;
     font-size: 1.6rem;
-    color: $color-grey-80;
+    color: $color-secondary;
+    font-weight: $font-weight-normal;
     margin: .75rem $gutter 0 $gutter;
   }
 
@@ -64,7 +65,26 @@ main {
     color: $color-grey-50;
     margin: .5rem $gutter 0 $gutter;
   }
-
+  >h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(#07959f, #064661);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 1rem $gutter .3rem $gutter;
+    font-weight: 500;
+    @include img-shadow-1;
+  }
+  >h5 {
+    font-size: 1.2rem;
+    font-weight: $font-weight-thin;
+    color: $color-grey-60;
+    margin: .3rem $gutter;
+    b {
+      font-weight: $font-weight-normal;
+    }
+  }
   >p {
     @include fixheads;
     font-size: 1rem;
@@ -72,11 +92,104 @@ main {
     margin: .1rem $gutter ;
     line-height: 150%;
   }
+
+  a {
+    color: $color-secondary;
+    font-weight: $font-weight-normal;
+  }
+
   >ul li {
     line-height: 150%;
     color: $color-grey-80;
   }
+
+  >ol li {
+    padding: .5rem;
+    line-height: 130%;
+    color: $color-grey-80;
+
+    b {
+      font-weight: $font-weight-heavy;
+      color: $color-secondary
+    }
+  }
+
+  .checklist li {
+    list-style-image: url(/photos/check.png);
+    line-height: 200%;
+    color: $color-primary;
+    font-size: 1.1em;
+  }
+
+  .download {
+    display: block;
+    color: white;
+    padding: 1rem $gutter;
+    margin: 1rem $gutter;
+    border: 1px solid $color-grey-40;
+    border-radius: 10px;
+    background-color: $color-secondary;
+    background-image: url(/photos/download.svg);
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 20px;
+    transition: background-color .5s ease;
+
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
 }
+
+/************************** PHOTOS **************************/
+img.wrapped {
+  display: block;
+  float: right;
+  margin: 10px $gutter;
+  width: 50%;
+  border-radius: 10px;
+  border: 1px solid $color-grey-50;
+  @include img-shadow-1;
+}
+
+img.smile {
+  display: block;
+  width: calc(100% - ($gutter * 2));
+  height: auto;
+  margin: 1rem $gutter;
+  border-radius: 10px;
+}
+
+/************************** F A Q **************************/
+details.faq {
+  background-color: #f2f2f2;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: .5em .5em 0;
+  margin: 1rem $gutter;
+  @include img-shadow-1;
+  line-height: 140%;
+  color: $color-grey-60;
+  summary {
+    font-weight: bold;
+    font-weight: $font-weight-heavy;
+    color: $color-primary;
+    padding: .5em;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  b {
+    font-weight: $font-weight-normal;
+    color: $color-secondary;
+  }
+}
+
+
+
 
 
 /************************** FOOTER **************************/
@@ -102,6 +215,7 @@ footer .top {
     display: flex;
     flex-wrap: wrap;
     gap: $gutter;
+
     a {
       display: block;
       width: 44px;
@@ -140,6 +254,7 @@ footer .bot {
   color: $color-grey-80;
   text-align: center;
   font-size: .8rem;
+
   a {
     color: $color-grey-90;
   }

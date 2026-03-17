@@ -23,9 +23,15 @@
     column-gap: 40px;
     grid-template-columns: 1fr 1fr;
     padding: 0 40px;
+
     img {
       margin: 2rem $gutter;
       border-radius: 4px;
     }
+  }
+
+  /************************** PHOTOS **************************/
+  img.wrapped {
+    width: 30%;
   }
 }

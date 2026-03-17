@@ -14,4 +14,16 @@
         grid-template-columns: 1fr 1fr;
     }
 
+    /************************** PHOTOS **************************/
+    img.wrapped {
+        width: 40%;
+    }
+
+    /************************** F A Q **************************/
+    details.faq section {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: $gutter;
+        img {margin-top: 16px;}
+    }
 }
