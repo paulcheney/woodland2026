@@ -141,6 +141,33 @@ main {
   }
 }
 
+/************************** HERO VIDEO **************************/
+.herovideo {
+  margin: 1rem $gutter;
+  position: relative;
+  video {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  a {
+    position: absolute;
+    bottom: 16px;
+    right: 10px;
+    display: block;
+    background-color: $color-secondary;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 99px;
+    @include img-shadow-1;
+    &:hover {
+      background-color: $color-primary; 
+    }
+  }
+}
+
+
+
 /************************** PHOTOS **************************/
 img.wrapped {
   display: block;

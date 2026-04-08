@@ -574,6 +574,31 @@ main .download:hover {
   background-color: #064661;
 }
 
+/************************** HERO VIDEO **************************/
+.herovideo {
+  margin: 1rem 10px;
+  position: relative;
+}
+.herovideo video {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.herovideo a {
+  position: absolute;
+  bottom: 16px;
+  right: 10px;
+  display: block;
+  background-color: #07959f;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 99px;
+  box-shadow: 1px 1px 6px lab(85% 0 0);
+}
+.herovideo a:hover {
+  background-color: #064661;
+}
+
 /************************** PHOTOS **************************/
 img.wrapped {
   display: block;
